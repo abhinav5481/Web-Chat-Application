@@ -1,68 +1,18 @@
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+# Web-Chat-Application
 
-## Available Scripts
+### Real time chat application, developed for instant messaging. User can create account, track notifcations, change their profile picture & send messages to their friends.
 
-In the project directory, you can run:
+New users have to first register themselves by entering their Email & Password. If a user has already created an account before then they can click on 'Log In' and can directly get signed in to their account.
+![Signup Page](https://github.com/abhinav5481/web-chat-application/blob/master/images/Signup.png)
 
-### `npm start`
+After signing up, a blank dashboard appears on the screen. To start the conversation click on the 'New Message' tab. This will show up a form where user have to enter the receiver's email address (Note: The receiver should also be a registered user of the app), then they can type their message and click on send.
+![Dashboard](https://github.com/abhinav5481/web-chat-application/blob/master/images/Dashboard_1.png)
 
-Runs the app in the development mode.<br />
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Once the first message is sent to the receiver, a chat box is created in the left panel of the dashboard (Just like Whatsapp-web interface). The receiver will also receive a notification about the message. Messages by the sender will appear on the left side of the conversation panel whereas for the reciever it will be on the right hand side (Unlike  Whatsapp-web interface).
+![Chat-box & Notification](https://github.com/abhinav5481/web-chat-application/blob/master/images/Notification.png)
 
-The page will reload if you make edits.<br />
-You will also see any lint errors in the console.
+If a sender wants to delete any message from the conversation they can hover over the message & click on delete icon. Doing this would delete that message from the database.
+If users wants to delete complete chat then they can do that by clicking on the delete icon of the chat box. (Note: This is an irreversible process, doing this would delete all the chat history from both sender's & receiver's interface)
+![Delete chat & messages](https://github.com/abhinav5481/web-chat-application/blob/master/images/Delete_Chat.png)
 
-### `npm test`
-
-Launches the test runner in the interactive watch mode.<br />
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.<br />
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.<br />
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/code-splitting
-
-### Analyzing the Bundle Size
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size
-
-### Making a Progressive Web App
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app
-
-### Advanced Configuration
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/advanced-configuration
-
-### Deployment
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/deployment
-
-### `npm run build` fails to minify
-
-This section has moved here: https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify
+At last to log out from the account click on 'Sign Out' tab.
