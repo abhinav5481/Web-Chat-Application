@@ -16,7 +16,7 @@ After signing up, a blank dashboard appears on the screen. To start the conversa
 Once the first message is sent to the receiver, a chat box is created in the left panel of the dashboard (Just like Whatsapp-web interface). The receiver will also receive a notification about the message. Messages by the sender will appear on the left side of the conversation panel whereas for the reciever it will be on the right hand side (Unlike  Whatsapp-web interface).
 ![Chat-box & Notification](https://github.com/abhinav5481/web-chat-application/blob/master/images/Notification.png)
 
-### Did't like the message :grimacing:? Delete it :stuck_out_tongue:
+### Did't like the message :grimacing:? ..... Delete it! :stuck_out_tongue:
 If a sender wants to delete any message from the conversation they can hover over the message & click on delete icon. Doing this would delete that message from the database.
 If users wants to delete complete chat then they can do that by clicking on the delete icon of the chat box. (Note: This is an irreversible process, doing this would delete all the chat history from both sender's & receiver's interface)
 ![Delete chat & messages](https://github.com/abhinav5481/web-chat-application/blob/master/images/Delete_Chat.png)
