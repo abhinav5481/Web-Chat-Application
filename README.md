@@ -2,6 +2,7 @@
 
 ### Real time chat application, developed for instant messaging. User can create account, track notifcations, change their profile picture & send messages to their friends.
 
+#### Do checkout the app: [Web-Chat-Application](https://chat-app-39de2.firebaseapp.com/)
 New users have to first register themselves by entering their Email & Password. If a user has already created an account before then they can click on 'Log In' and can directly get signed in to their account.
 ![Signup Page](https://github.com/abhinav5481/web-chat-application/blob/master/images/Signup.png)
 
