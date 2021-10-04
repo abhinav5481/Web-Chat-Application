@@ -14,61 +14,61 @@ import NotificationImportant from '@material-ui/icons/NotificationImportant';
 
 class ChatListComponent extends React.Component {
 
-newChat = () => {
-    this.props.newChatBtnFn();
-console.log('new chat clicked');
-}
+    newChat = () => {
+        this.props.newChatBtnFn();
+        console.log('new chat clicked');
+    }
 
-selectChat = (index) => {
-   this.props.selectChatFn(index);
-}
+    selectChat = (index) => {
+        this.props.selectChatFn(index);
+    }
 
-userIsSender = (chat) =>  chat.messages[chat.messages.length - 1].sender === this.props.userEmail;
+    userIsSender = (chat) => chat.messages[chat.messages.length - 1].sender === this.props.userEmail;
 
 
 
-    render(){
+    render() {
         const { classes } = this.props;
-        if(this.props.chats.length > 0){
-            return(
+        if (this.props.chats.length > 0) {
+            return (
                 <main className={classes.root}>
                     <Button variant='contained'
-                    fullWidth
-                    color="primary"
-                    className={classes.newChatBtn}
-                    onClick={this.newChat}>
+                        fullWidth
+                        color="primary"
+                        className={classes.newChatBtn}
+                        onClick={this.newChat}>
                         New Message
                     </Button>
                     <List>
                         {
-                            this.props.chats.map((_chat,_index) => {
-                                return(
+                            this.props.chats.map((_chat, _index) => {
+                                return (
                                     <div key={_index}>
-                                            <ListItem onClick={() => this.selectChat(_index)} className={classes.listItem} selected={this.props.selectedChatIndex === _index} alignItems='flex-start'>
-                                                <ListItemAvatar>
+                                        <ListItem onClick={() => this.selectChat(_index)} className={classes.listItem} selected={this.props.selectedChatIndex === _index} alignItems='flex-start'>
+                                            <ListItemAvatar>
                                                 <Avatar alt='Remy Sharp'>{_chat.users.filter(_user => _user !== this.props.userEmail)[0].split('')[0].toUpperCase()}</Avatar>
-    
-                                                </ListItemAvatar>
+
+                                            </ListItemAvatar>
                                             <ListItemText primary={_chat.users.filter(_user => _user !== this.props.userEmail)[0].split('@')[0]}
                                                 secondary={
                                                     <React.Fragment>
                                                         <Typography component='span' color='test-primary'>
                                                             {
-                                                                _chat.messages[_chat.messages.length - 1].message.substring(0,30)
+                                                                _chat.messages[_chat.messages.length - 1].message.substring(0, 30)
                                                             }
                                                         </Typography>
                                                     </React.Fragment>
                                                 }
                                             ></ListItemText>
                                             {
-                                               _chat.receiverHasRead === false && !this.userIsSender(_chat) ? 
-                                               <ListItemIcon>
-                                                   <NotificationImportant className={classes.unreadMessage}></NotificationImportant>
-                                               </ListItemIcon> : null
+                                                _chat.receiverHasRead === false && !this.userIsSender(_chat) ?
+                                                    <ListItemIcon>
+                                                        <NotificationImportant className={classes.unreadMessage}></NotificationImportant>
+                                                    </ListItemIcon> : null
                                             }
-                                            </ListItem>
-                                            <Divider></Divider>
-                                            <Divider></Divider>
+                                        </ListItem>
+                                        <Divider></Divider>
+                                        <Divider></Divider>
                                     </div>
                                 )
                             })
@@ -77,15 +77,15 @@ userIsSender = (chat) =>  chat.messages[chat.messages.length - 1].sender === thi
                 </main>
             )
         }
-        else{
-            return(
+        else {
+            return (
                 <main className={classes.root}>
-                    <Button 
-                    variant='contained' 
-                    fullWidth 
-                    color='primary'
-                    onClick={this.newChat}
-                    className={classes.newChatBtn}>
+                    <Button
+                        variant='contained'
+                        fullWidth
+                        color='primary'
+                        onClick={this.newChat}
+                        className={classes.newChatBtn}>
                         New Message
                         <List></List>
                     </Button>
